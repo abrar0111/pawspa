@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "43721946981",
+    "project_id": "paw-spa",
+    "storage_bucket": "paw-spa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:43721946981:android:849471272ded194e29538c",
+        "android_client_info": {
+          "package_name": "com.example.pawspa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9FuvL17hHUCLuvbYfa5POOyWeJDWlsSw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
