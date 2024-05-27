@@ -6,21 +6,27 @@
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/etNumberOfDays"
+        android:id="@+id/etNumberOfAppointments"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Number of Days"
-        android:inputType="number"/>
+        android:hint="Number of Appointments"
+        android:inputType="number" />
 
     <TextView
         android:id="@+id/tvTotalAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total Amount: "/>
+        android:text="Total Amount: " />
 
     <Button
         android:id="@+id/btnCalculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calculate"/>
+        android:text="Calculate" />
+
+    <Button
+        android:id="@+id/btnAdminPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to Admin Page" />
 </LinearLayout>

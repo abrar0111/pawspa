@@ -9,59 +9,85 @@
         android:id="@+id/etRecordId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Record ID"/>
+        android:hint="Record ID"
+        android:inputType="text" />
 
     <EditText
-        android:id="@+id/etField1"
+        android:id="@+id/etPetName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Field 1"/>
+        android:layout_marginTop="8dp"
+        android:hint="Pet Name"
+        android:inputType="text" />
 
     <EditText
-        android:id="@+id/etField2"
+        android:id="@+id/etOwnerName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Field 2"/>
+        android:layout_marginTop="8dp"
+        android:hint="Owner Name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Date"
+        android:inputType="date" />
 
     <Button
         android:id="@+id/btnAddRecord"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Record"/>
+        android:layout_marginTop="8dp"
+        android:text="Add Record" />
 
     <Button
         android:id="@+id/btnDeleteRecord"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Delete Record"/>
+        android:layout_marginTop="8dp"
+        android:text="Delete Record" />
 
     <Button
         android:id="@+id/btnUpdateRecord"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Update Record"/>
+        android:layout_marginTop="8dp"
+        android:text="Update Record" />
 
     <Button
         android:id="@+id/btnViewRecord"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="View Record"/>
+        android:layout_marginTop="8dp"
+        android:text="View Record" />
 
     <Button
         android:id="@+id/btnReset"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Reset"/>
+        android:layout_marginTop="8dp"
+        android:text="Reset" />
 
     <Button
         android:id="@+id/btnCalculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calculate"/>
+        android:layout_marginTop="8dp"
+        android:text="Calculate" />
 
     <Button
         android:id="@+id/btnClose"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Close"/>
+        android:layout_marginTop="8dp"
+        android:text="Close" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
 </LinearLayout>

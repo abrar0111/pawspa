@@ -36,6 +36,8 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.firebase.firestore)
+    implementation(libs.firebase.database)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -43,5 +45,9 @@ dependencies {
     // Firebase BOM and Analytics dependency
     implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
     implementation("com.google.firebase:firebase-analytics")
-}
 
+    // Firebase Authentication and Firestore
+    implementation("com.google.firebase:firebase-auth:21.0.6")
+    implementation("com.google.firebase:firebase-firestore:24.0.2")
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
+}

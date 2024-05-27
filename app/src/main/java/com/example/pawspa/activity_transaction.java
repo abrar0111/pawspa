@@ -1,5 +1,6 @@
 package com.example.pawspa;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,18 +11,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class activity_transaction extends AppCompatActivity {
 
-    private EditText etNumberOfDays;
+    private EditText etNumberOfAppointments;
     private TextView tvTotalAmount;
-    private Button btnCalculate;
+    private Button btnCalculate, btnAdminPage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaction);
 
-        etNumberOfDays = findViewById(R.id.etNumberOfDays);
+        etNumberOfAppointments = findViewById(R.id.etNumberOfAppointments);
         tvTotalAmount = findViewById(R.id.tvTotalAmount);
         btnCalculate = findViewById(R.id.btnCalculate);
+        btnAdminPage = findViewById(R.id.btnAdminPage);
 
         btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,14 +33,21 @@ public class activity_transaction extends AppCompatActivity {
                 }
             }
         });
+
+        btnAdminPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(activity_transaction.this, activity_admin.class));
+            }
+        });
     }
 
     private boolean validateInputs() {
-        String numberOfDays = etNumberOfDays.getText().toString().trim();
+        String numberOfAppointments = etNumberOfAppointments.getText().toString().trim();
 
-        if (numberOfDays.isEmpty()) {
-            etNumberOfDays.setError("Number of Days is required");
-            etNumberOfDays.requestFocus();
+        if (numberOfAppointments.isEmpty()) {
+            etNumberOfAppointments.setError("Number of Appointments is required");
+            etNumberOfAppointments.requestFocus();
             return false;
         }
 
@@ -46,8 +55,8 @@ public class activity_transaction extends AppCompatActivity {
     }
 
     private void calculateTotalAmount() {
-        int numberOfDays = Integer.parseInt(etNumberOfDays.getText().toString().trim());
-        int totalAmount = numberOfDays * 2;
+        int numberOfAppointments = Integer.parseInt(etNumberOfAppointments.getText().toString().trim());
+        int totalAmount = numberOfAppointments * 2; // Assuming the rate is 2 currency units per appointment
         tvTotalAmount.setText("Total Amount: " + totalAmount);
     }
 }

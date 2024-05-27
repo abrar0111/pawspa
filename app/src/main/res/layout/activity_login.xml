@@ -10,25 +10,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"
-        android:inputType="textEmailAddress"/>
+        android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"/>
+        android:text="Login" />
 
     <TextView
         android:id="@+id/tvRegister"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Don't have an account? Register here."
-        android:textColor="@android:color/holo_blue_light"/>
+        android:text="Register"
+        android:gravity="center"
+        android:textColor="@android:color/holo_blue_dark"
+        android:clickable="true" />
 </LinearLayout>
