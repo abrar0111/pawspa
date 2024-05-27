@@ -56,7 +56,8 @@ public class activity_transaction extends AppCompatActivity {
 
     private void calculateTotalAmount() {
         int numberOfAppointments = Integer.parseInt(etNumberOfAppointments.getText().toString().trim());
-        int totalAmount = numberOfAppointments * 2; // Assuming the rate is 2 currency units per appointment
+        int totalAmount = numberOfAppointments * 2; //the rate is 2 currency units per appointment
         tvTotalAmount.setText("Total Amount: " + totalAmount);
+
     }
 }

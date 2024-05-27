@@ -19,7 +19,7 @@ public class activity_register extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_register); // Ensure this matches the layout file name
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -79,14 +79,11 @@ public class activity_register extends AppCompatActivity {
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
-                        // Registration success
                         Toast.makeText(activity_register.this, "Registration successful", Toast.LENGTH_SHORT).show();
-                        // Navigate back to login screen
                         Intent intent = new Intent(activity_register.this, activity_login.class);
                         startActivity(intent);
                         finish();
                     } else {
-                        // If registration fails
                         Toast.makeText(activity_register.this, "Registration failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });

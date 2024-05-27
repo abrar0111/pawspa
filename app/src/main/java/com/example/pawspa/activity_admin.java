@@ -227,7 +227,7 @@ public class activity_admin extends AppCompatActivity {
             return;
         }
 
-        // Example calculation logic, you can customize this as needed
+        // Example calculation logic
         int result = petName.length() + ownerName.length();
         Toast.makeText(this, "Calculation result: " + result, Toast.LENGTH_SHORT).show();
     }
